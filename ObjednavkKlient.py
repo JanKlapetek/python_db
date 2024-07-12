@@ -8,7 +8,7 @@ def main():
     session = Session()
 
     # Vytvoření klienta
-    klient = create_klient(session, 'Petsr Naosvaak', 'jana.naaaovak@example.com')
+    klient = create_klient(session, 'Jan Klapetek', 'jan.klapetek@gmail.com')
     print(f'Vytvořen klient: {klient.jmeno}, {klient.email}')
 
     # Získání klienta
@@ -16,7 +16,7 @@ def main():
     print(f'Získaný klient: {klient.jmeno}, {klient.email}')
 
     # Vytvoření objednávky pro klienta
-    objednavka = create_objednavka(session, klient.id, 1500.0)
+    objednavka = create_objednavka(session, klient.id, 3500.0)
     print(f'Vytvořena objednávka: {objednavka.id}, {objednavka.celkova_cena}')
 
     # Získání objednávek pro klienta
@@ -31,6 +31,7 @@ def main():
 
     # Uzavření session
     session.close()
+    
 
 if __name__ == '__main__':
     main()

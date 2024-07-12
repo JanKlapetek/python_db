@@ -22,7 +22,7 @@ class Objednavka(Base):
     klient = relationship('Klient', back_populates='objednavka')
 
 # Nastavení databáze
-DATABASE_URL = 'postgresql+psycopg2://koyeb-adm:XQc0HOTwa1Kl@ep-sweet-thunder-a221r1bm.eu-central-1.pg.koyeb.app/sandbox?sslmode=require'
+DATABASE_URL = 'postgresql+psycopg2://koyeb-adm:RmiEvoMz7a3s@ep-white-band-a2h03cgc.eu-central-1.pg.koyeb.app/sandbox?sslmode=require'
 
 engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
